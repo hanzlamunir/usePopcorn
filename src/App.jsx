@@ -95,7 +95,7 @@ function Logo() {
   return (
     <div className="logo">
       <span role="img">
-        <img src="/public/popcorn-icon.png" alt="logo" />
+        <img src="/popcorn-icon.png" alt="logo" />
       </span>
       <h1>usePopcorn</h1>
     </div>
