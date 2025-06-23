@@ -14,7 +14,7 @@ const KEY = "44119da2";
 function App() {
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState("");
-  // const { movies, isLoading, error } = useMovies(query, handleCloseMovie);
+
   const { movies, isLoading, error } = useMovies(query);
 
   const [watched, setWatched] = useLocalStorageState([], "watched");
@@ -46,7 +46,6 @@ function App() {
     <>
       <NavBar>
         <Search query={query} setQuery={setQuery} />
-        {/* <Genre movies={movies} /> */}
         <NumResults movies={movies} />
       </NavBar>
 
@@ -231,7 +230,7 @@ function MovieDetail({
     async function getMovieDetail() {
       setIsLoading(true);
       const res = await fetch(
-        `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
+        `https://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
       );
       const data = await res.json();
       setMovie(data);

@@ -3,7 +3,6 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 
 import "./star-rating.style.css";
-// import { PropTypes } from "prop-types";
 
 StarRating.propTypes = {
   maxRating: PropTypes.number,
