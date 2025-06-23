@@ -9,7 +9,8 @@ import useKey from "./custom-hooks/useKey";
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
-const KEY = "44119da2";
+// const KEY = "44119da2";
+const KEY = import.meta.env.VITE_OMDB_KEY;
 
 function App() {
   const [query, setQuery] = useState("");
